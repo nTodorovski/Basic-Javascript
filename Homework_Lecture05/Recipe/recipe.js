@@ -1,6 +1,5 @@
 let name = prompt("What's the name of the recipe?");
 let igredients = prompt("How many igredients do we need for the recipe");
-let igredients1 = Number(igredients);
 
 let node = document.getElementById("myDiv");
 let header = document.createElement("h1");
