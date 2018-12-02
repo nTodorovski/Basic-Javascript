@@ -8,5 +8,5 @@
 
 ## Homework Lecture 06
 
--Register User in a Table
--Table Generator with different colors
+1. Register User in a Table
+2. Table Generator with different colors
