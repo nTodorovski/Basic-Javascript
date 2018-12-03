@@ -40,8 +40,10 @@ button.addEventListener("click", function values(){
     let niza = [result,result1];
 
     if(counter1>=1){
-        let tabela1 = document.getElementById(`table${counter1}`);
-        body.removeChild(tabela1);
+        if(document.getElementById(`table${counter1}`)){
+            let tabela1 = document.getElementById(`table${counter1}`);
+            body.removeChild(tabela1);
+        }
     }
     if(numResult === 0 || numResult1 === 0){
         paragraph1.innerHTML = "";
