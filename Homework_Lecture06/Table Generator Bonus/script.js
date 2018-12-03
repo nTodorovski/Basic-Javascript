@@ -43,7 +43,13 @@ button.addEventListener("click", function values(){
         let tabela1 = document.getElementById(`table${counter1}`);
         body.removeChild(tabela1);
     }
-    if(result === "" || result1 === ""){
+    if(numResult === 0 || numResult1 === 0){
+        paragraph1.innerHTML = "";
+        paragraph1.innerHTML="Error: Please enter values starting from 1.";
+        paragraph1.style.fontSize="xx-large";
+        document.getElementById("rows").value = "";
+        document.getElementById("columns").value = "";
+    } else if(result === "" || result1 === ""){
         paragraph1.innerHTML = "";
         paragraph1.innerHTML="Error: Please enter values in the both fields.";
         paragraph1.style.fontSize="xx-large";
