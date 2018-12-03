@@ -52,6 +52,8 @@ button.addEventListener("click", function values(){
         let paragraph2 = document.getElementById("para1");
         paragraph2.innerHTML="";
         generateTable(niza[0],niza[1]);
+        document.getElementById("rows").value = "";
+        document.getElementById("columns").value = "";
     }
 })
 
