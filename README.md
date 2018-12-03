@@ -10,3 +10,5 @@
 
 - Register User in a Table
 - Table Generator with different colors
+- Table Generator with validations
+- Window Size
