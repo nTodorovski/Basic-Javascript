@@ -40,10 +40,14 @@ button.addEventListener("click", function values(){
         paragraph1.innerHTML = "";
         paragraph1.innerHTML="Error: Please enter values in the both fields.";
         paragraph1.style.fontSize="xx-large";
+        document.getElementById("rows").value = "";
+        document.getElementById("columns").value = "";
     } else if(Number.isNaN(numResult) || Number.isNaN(numResult1)){
         let paragraph11 = document.getElementById("para1");
         paragraph11.innerHTML="Error: Please enter numbers in the fields."
         paragraph11.style.fontSize="xx-large";
+        document.getElementById("rows").value = "";
+        document.getElementById("columns").value = "";
     } else{
         let paragraph2 = document.getElementById("para1");
         paragraph2.innerHTML="";
