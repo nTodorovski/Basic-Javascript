@@ -30,12 +30,19 @@ button.textContent = "Enter";
 let paragraph1 = document.createElement("p");
 paragraph1.id = "para1";
 body.appendChild(paragraph1);
+let counter1=0; // counter koj ke mi sluzi za id na tabelite
+
 button.addEventListener("click", function values(){
     let result = document.getElementById("rows").value;
     let result1 = document.getElementById("columns").value;
     let numResult = Number(result);
     let numResult1 = Number(result1);
     let niza = [result,result1];
+
+    if(counter1>=1){
+        let tabela1 = document.getElementById(`table${counter1}`);
+        body.removeChild(tabela1);
+    }
     if(result === "" || result1 === ""){
         paragraph1.innerHTML = "";
         paragraph1.innerHTML="Error: Please enter values in the both fields.";
@@ -51,6 +58,7 @@ button.addEventListener("click", function values(){
     } else{
         let paragraph2 = document.getElementById("para1");
         paragraph2.innerHTML="";
+        counter1++;
         generateTable(niza[0],niza[1]);
         document.getElementById("rows").value = "";
         document.getElementById("columns").value = "";
@@ -60,6 +68,7 @@ button.addEventListener("click", function values(){
 function generateTable(r,c){
     let body = document.getElementsByTagName("body")[0];
     let table = document.createElement("table");
+    table.id = `table${counter1}`
     table.border = "2";
     table.width = "400";
     let tableBody = document.createElement("tbody");
