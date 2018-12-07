@@ -13,7 +13,7 @@
 - Table Generator with validations
 - Window Size
 
-##Homework Lecture 07
+## Homework Lecture 07
 
 - Fuel Consumption
 - Reading status of a book
