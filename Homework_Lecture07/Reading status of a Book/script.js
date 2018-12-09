@@ -1,74 +1,63 @@
-let book = {
-    title: "title",
-    author: "author",
-    readingStatus: "readingStatus",
-    readingStatusInfo: function () {
+function setBook(name, author) {
+    let book = {
+      name: name,
+      author: author,
+      readingStatus:"",
+      readingStatusInfo: function() {
         let paragraph = document.createElement("p");
         paragraph.style.fontSize = "25px";
         let body = document.getElementsByTagName("body")[0];
         if(this.readingStatus === true){
-            paragraph.innerHTML = `Already read '${this.title}' by ${this.author}.`;
+            paragraph.innerHTML = `Already read '${this.name}' by ${this.author}.`;
             body.appendChild(paragraph);
         } else if(this.readingStatus === false){
-            paragraph.innerHTML = `You still need to read '${this.title}' by ${this.author}.`;
+            paragraph.innerHTML = `You still need to read '${this.name}' by ${this.author}.`;
             body.appendChild(paragraph);
         }
-    }
+      }
+    };
+    return book;
 }
 
-let paragraph1 = document.getElementById("paragraph1");
-paragraph1.innerHTML = "Book: Zoki Poki by Olivera Nikolova.";
+let book1 = setBook("Zoki Poki","Olivera Nikolova"); 
+let book2 = setBook("Marta","Gorjan Petrevski");
+let book3 = setBook("Vtorata Smena","Venko Nedelkovski");
 
-let paragraph2 = document.getElementById("paragraph2");
-paragraph2.innerHTML = "Book: Vtorata Smena by Velko Nedelkovski.";
-
-let paragraph3 = document.getElementById("paragraph3");
-paragraph3.innerHTML = "Book: Marta by Gorjan Petrevski.";
+let p1 = document.getElementById("p1");
+p1.innerHTML = `Have you read this book? -${book1.name} by ${book1.author}.`;
+let p2 = document.getElementById("p2");
+p2.innerHTML = `Have you read this book? -${book2.name} by ${book2.author}.`;
+let p3 = document.getElementById("p3");
+p3.innerHTML = `Have you read this book? -${book3.name} by ${book3.author}.`;
 
 
 let button1 = document.getElementById("button1");
 button1.addEventListener("click",function info(){
-    book.readingStatus = true;
-    book.title = "Zoki Poki";
-    book.author = "Olivera Nikolova";
-    book.readingStatusInfo();
+    book1.readingStatus = true;
+    book1.readingStatusInfo();
 });
 let button2 = document.getElementById("button2");
 button2.addEventListener("click",function info(){
-    book.readingStatus = false;
-    book.title = "Zoki Poki";
-    book.author = "Olivera Nikolova";
-    book.readingStatusInfo();
+    book1.readingStatus = false;
+    book1.readingStatusInfo();
 });
-
 let button3 = document.getElementById("button3");
 button3.addEventListener("click",function info(){
-    book.readingStatus = true;
-    book.title = "Vtorata Smena";
-    book.author = "Velko Nedelkovski";
-    book.readingStatusInfo();
+    book2.readingStatus = true;
+    book2.readingStatusInfo();
 });
-
 let button4 = document.getElementById("button4");
 button4.addEventListener("click",function info(){
-    book.readingStatus = false;
-    book.title = "Vtorata Smena";
-    book.author = "Velko Nedelkovski";
-    book.readingStatusInfo();
+    book2.readingStatus = false;
+    book2.readingStatusInfo();
 });
-
 let button5 = document.getElementById("button5");
 button5.addEventListener("click",function info(){
-    book.readingStatus = true;
-    book.title = "Marta";
-    book.author = "Gorjan Petrevski";
-    book.readingStatusInfo();
+    book3.readingStatus = true;
+    book3.readingStatusInfo();
 });
-
 let button6 = document.getElementById("button6");
 button6.addEventListener("click",function info(){
-    book.readingStatus = false;
-    book.title = "Marta";
-    book.author = "Gorjan Petrevski";
-    book.readingStatusInfo();
+    book3.readingStatus = false;
+    book3.readingStatusInfo();
 });
