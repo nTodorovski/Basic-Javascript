@@ -12,7 +12,10 @@ para.id = "para";
 body.appendChild(para);
 
 let button = document.getElementById("button");
-button.addEventListener("click",function (){
+button.addEventListener("click",setting);
+
+
+function setting(){
     let para1 = document.getElementById("para");
     para1.innerHTML = "";
     let input1 = document.getElementById("input1").value;
@@ -28,4 +31,4 @@ button.addEventListener("click",function (){
     document.getElementById("input1").value = "";
     document.getElementById("input2").value = "";
     document.getElementById("input3").value = "";
-})
+}
