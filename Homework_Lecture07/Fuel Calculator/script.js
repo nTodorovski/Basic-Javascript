@@ -10,7 +10,9 @@ let car = {
     }
 }
 let button = document.getElementById("button1");
-button.addEventListener("click",function howMuch(){
+button.addEventListener("click",setting);
+
+function setting(){
     let model = document.getElementById("1").value;
     car.model = model;
     let color = document.getElementById("2").value;
@@ -56,4 +58,4 @@ button.addEventListener("click",function howMuch(){
         let input2 = document.getElementById("input2");
         input2.value = `${result1} liters`;
     }
-});
+}
