@@ -31,7 +31,7 @@ function toWords(broj)
     let bukvi = ""; 
 
     if(broj >= 0 && broj <= 19){
-        let broj1 = broj % 10;
+        let broj1 = broj % 100;
         bukvi = edinici[broj1];
     } else if(broj >= 20 && broj <= 99){
         prvaCifra = Math.floor(broj / 10); // ja zimam prvata cifra
