@@ -1,4 +1,4 @@
-# Javascript_Homework
+# Javascript Homework
 
 ## Homework Lecture 05
 - Change the text of all paragraphs
