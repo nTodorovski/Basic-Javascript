@@ -16,8 +16,6 @@ saveBtn.addEventListener("click",function(){
             return;
         } else{
             let selectTr = document.getElementById(lastChar);
-            console.log(selectTr);
-            console.log(selectTr.children[1]);
             selectTr.children[1].innerHTML = activeContact.firstName;
             selectTr.children[2].innerHTML = activeContact.lastName;
             selectTr.children[3].innerHTML = activeContact.email;
