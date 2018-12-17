@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td{
+            border: 3px solid black; 
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        table{
+            border: 3px;
+            border-color:black;
+            border-collapse:collapse;
+        }
+        p{
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 80px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Contacts</td>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+    <p>First Name: <input type="text" id="firstName"></p>
+    <p>Last Name: <input type="text" id="lastName"></p>
+    <p>Email: <input type="text" id="email"></p>
+    <p>Password: <input type="password" id="password"></p>
+    <button id="discard">Discard</button>
+    <button id="save">Save</button>
+    <br>
+    <div id="error"></div>
+    <script src="script.js"></script>
+</body>
+</html>
