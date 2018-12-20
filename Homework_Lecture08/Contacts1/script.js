@@ -103,6 +103,7 @@ function delete1(event){
         allTr[i].children[0].innerHTML=idCounter1;
         idCounter1++;
     }
+    idCounter = idCounter1;
     idCounter1=0;
 }
 let validateValues = function(firstName, lastName, email){
