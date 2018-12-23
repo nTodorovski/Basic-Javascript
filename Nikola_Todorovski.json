@@ -1,0 +1,14 @@
+{
+    "firstName":"Nikola",
+    "lastName":"Todorovski",
+    "age":"26",
+    "hobbies": [
+        "Collecting tickets",
+        "Football playing"
+    ],
+    "bestFriend": {
+        "firstName":"Darko",
+        "lastName":"Ivanovski",
+        "age":"26"
+    }
+}
