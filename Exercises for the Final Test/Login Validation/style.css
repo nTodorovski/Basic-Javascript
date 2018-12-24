@@ -1,0 +1,33 @@
+body {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginForm {
+  background-color: white;
+  width: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.centerText {
+  text-align: center;
+}
+
+#email {
+  margin-bottom: 30px;
+}
+
+#pass {
+  margin-bottom: 70px;
+}
