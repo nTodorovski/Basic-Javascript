@@ -6,14 +6,23 @@ function Animal(name, type, breed, preferredFood, age, isHealthy) {
     this.age = age;
     this.isHealthy = isHealthy;
     this.owner = "";
-    this.eat = function(){ return `${this.type} ${this.name} is eating ${this.preferredFood}.`};
+    this.eat = function(){
+        console.log(`${this.type} ${this.name} is eating ${this.preferredFood}.`)
+    };
     this.adopt = function(name, lastname){
         for(i=0;i<people.length;i++){
             if(people[i].firstName === name && people[i].lastName === lastname){
                 this.owner = `${people[i].firstName} ${people[i].lastName}`;
-                people[i].pets.push(this.type+" "+this.name);
+                for(j=0;j<vardarishte.length;j++){
+                    if(this.name === vardarishte[j].name){
+                        people[i].pets.push(vardarishte[j]);
+                        vardarishte.splice(j,1);
+                    }
+                }
             }
         }
+        console.log(vardarishte);
+        console.log(people);
     };
     this.isAdopted = function(){ 
         if(this.owner = ""){
@@ -46,6 +55,8 @@ function Person(firstName, lastName, age){
                 vardarishte.splice(i,1);
             }
         }
+        console.log(people);
+        console.log(vardarishte);
     }
     this.abandon = function(type,name){
         for(i=0;i<this.pets.length;i++){
@@ -55,6 +66,8 @@ function Person(firstName, lastName, age){
                 this.pets.splice(i,1);
             }
         }
+        console.log(people);
+        console.log(vardarishte);
     }
 }
 
@@ -63,7 +76,12 @@ let people = [];
 people.push((new Person("Nikola","Todorovski",26)));
 people.push((new Person("Petko","Petkovski",26)));
 
+console.log(people);
+console.log(vardarishte);
 
+$("<p>").text(`Animal adopt function is Animal.adopt("first Name of the person","last Name of the person")`).appendTo("body");
+$("<p>").text(`Person adopt function is Person.adopt("name of the shelter","animal type")`).appendTo("body");
+$("<p>").text(`Person abandon function is Person.abandon("animal type","name of the Animal")`).appendTo("body");
 // BONUS 1
 // people[0].adopt(vardarishte,"Cat")
 // people[1].adopt(vardarishte,"Monkey")
