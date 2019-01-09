@@ -1,13 +1,23 @@
 let arr1 = []; 
+
 let arr2; 
+
 let arr3; 
+
 let arr4; 
+
 let arr5; 
+
 let counter = 1; // broj na operatori
+
 let result = []; // array za regex matchovite
+
 let operators = []; // array na operatorite
+
 let sum = 0; // sumata od presmetkite
+
 let input; // oddelno sekoj match od regex
+
 let flag; // pomosna variabla za da znam sto da pokazuva na ekran 
 
 $("button").click(function(event){
@@ -84,6 +94,9 @@ function oneOperator(){ // funkcija za ako imame samo eden operator
         }
         if(operators[j] === "/"){
             sum = result[0]/result[1];
+            if(sum === Infinity){
+                sum = 0;
+            }
         }
     }
 }
@@ -97,6 +110,9 @@ function mulOrDiv(){ // funkcija za prvo da gi pomnozi ili podeli broevite
         }
         if(operators[j] === "/"){
             result[j] = result[j]/result[j+1];
+            if(result[j] === Infinity){
+                result[j] = 0;
+            }
             result.splice(j+1,1);
             operators.splice(j,1);
         }
@@ -112,16 +128,6 @@ function calculate(){ // funkcija koja gi pravi presmetkite pomegju borevite
         }
         if(operators[k] === "-"){
             sum = result[0]-result[1];
-            result.splice(1,1);
-            result[0]=sum;
-        }
-        if(operators[k] === "*"){
-            sum = result[0]*result[1];
-            result.splice(1,1);
-            result[0]=sum;
-        }
-        if(operators[k] === "/"){
-            sum = result[0]/result[1];
             result.splice(1,1);
             result[0]=sum;
         }
