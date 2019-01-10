@@ -197,10 +197,16 @@ function seperate(){ // funckija koga gi stava broevite vo niza i operatorite vo
         } else{
             input = arr4.match(/(\d+|\d+\.\d+)(\+|\-|\/|\*)/);
         }
+        if(input === null){
+            $(".calculator-screen").val("ERROR");
+        }
         let dolzina = input[0].length;
         operators.push(input[0].substr(input[0].length-1,1));
         let number = input[0].substr(0,input[0].length-1);
         result.push(Number(number));
         arr4 = arr4.slice(dolzina);
+        if(operators[0] === "="){
+            sum = result[0];
+        }
     }
 }
